@@ -86,7 +86,7 @@ time, mark, audio, video {
 .col-s.eight{width: 66.33%;}
 .col-s.nine{width: 74.75%;}
 .col-s.ten{width: 83.16%;}
-.col-s.eleven{width: 91.58.5%;}
+.col-s.eleven{width: 91.58%;}
 .col-s.twelve{width:100%;}
 
 @media (max-width:768px){
@@ -239,10 +239,10 @@ time, mark, audio, video {
 }
 /* Black */
 .black{
-  background:#000000 !important;
+  background:#303030 !important;
 }
 .black-text{
-  color:#000000 !important;
+  color:#303030 !important;
 }
 /* White */
 .white{
@@ -250,4 +250,101 @@ time, mark, audio, video {
 }
 .white-text{
   color:#FFFFFF !important;
+}
+/* -------- Button --------- */
+.btn{
+    border:0;
+    border-radius: 3px;
+    outline:none;
+    box-shadow:0px 1px 3px 0px rgba(0,0,0,0.12), 0px 1px 3px 0px rgba(0,0,0,0.24);
+    transition:all 0.3s ease-in-out;
+}
+.btn:focus, .btn:hover{
+	box-shadow:0px 3px 6px 0px rgba(0,0,0,0.15), 0px 3px 6px 0px rgba(0,0,0,0.22);
+}
+.btn.btn-small{
+  padding:5px;
+}
+.btn.btn-medium{
+  padding:7.5px;
+}
+.btn.btn-large{
+  padding:10px;
+}
+
+/* -------- ripple Effect --------- */
+/* Material Ripple effect */
+.ripple {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	user-select: none;
+}
+
+.ripple > span {
+  /* static positioned elements appear behind absolutely positioned siblings (.material-ink in this case)
+  so we will make the elements relatively positioned to bring them above .material-ink */
+  position: relative;
+  display: block;
+  padding: 15px 25px;
+}
+.white-ripple > .material-ink {
+  background-color: #FFFFFF;
+  z-index:1;
+}
+.black-ripple > .material-ink {
+  background-color: #303030;
+}
+.red-ripple > .material-ink {
+  background-color: #F44336;
+}
+.pink-ripple > .material-ink {
+  background-color: #E91E63;
+}
+.purple-ripple > .material-ink {
+  background-color: #9C27B0;
+}
+.indigo-ripple > .material-ink {
+  background-color: #3F51B5;
+}
+.blue-ripple > .material-ink {
+  background-color: #2196F3;
+}
+.teal-ripple > .material-ink {
+  background-color: #009688;
+}
+.green-ripple > .material-ink {
+  background-color: #4CAF50;
+}
+.yellow-ripple > .material-ink {
+  background-color: #FFEB3B;
+}
+.orange-ripple > .material-ink {
+  background-color: #FF5722;
+}
+.brow-ripple > .material-ink {
+  background-color: #795548;
+}
+
+/*
+.ink styles - the elements which will create the ripple effect.
+*/
+.material-ink {
+	position: absolute;
+	background: #bdc3c7;
+	border-radius: 50%;
+	transform: scale(0);
+	opacity: 0.4;
+}
+
+/* animation effect */
+.material-ink.animate {
+	animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+	100% {
+		transform: scale(2.5);
+		opacity: 0;
+	}
 }
