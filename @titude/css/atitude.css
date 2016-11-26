@@ -256,8 +256,8 @@ time, mark, audio, video {
 	background:none;
 	color:#2196F3;
 	border:0;
-    border-radius: 3px;
-    outline:none;
+  border-radius: 3px;
+  outline:none;
 }
 .btn.btn-raised{
     border:0;
@@ -281,12 +281,12 @@ time, mark, audio, video {
 
 /* Fab Button */
 .fab{
-	border-radius:50%; 
-	border:0; 
-	color:#000; 
-	margin: auto; 
-	padding:auto; 
-	vertical-align: middle; 
+	border-radius:50%;
+	border:0;
+	color:#000;
+	margin: auto;
+	padding:auto;
+	vertical-align: middle;
 	-webkit-user-select:none;
 	outline:none;
 	display:block;
@@ -294,12 +294,12 @@ time, mark, audio, video {
 	transition:all 0.3s ease-in-out;
 }
 .fab.small{
-	width:35px; 
-	height:35px; 
+	width:35px;
+	height:35px;
 }
 .fab.big{
-	width:50px; 
-	height:50px; 
+	width:50px;
+	height:50px;
 }
 .fab:focus, .fab:hover{
 	box-shadow:0px 3px 5px 0px rgba(0,0,0,0.15), 0px 3px 5px 0px rgba(0,0,0,0.22);
@@ -380,3 +380,24 @@ time, mark, audio, video {
 		opacity: 0;
 	}
 }
+
+
+/* -------------- Badge ------------ */
+.badge {
+       position:relative;
+   }
+.badge[data-badge]:after {
+       content:attr(data-badge);
+       position:absolute;
+       top:-10px;
+       right:-10px;
+       font-size:.7em;
+       background:green;
+       color:white;
+       width:18px;
+       height:18px;
+       text-align:center;
+       line-height:18px;
+       border-radius:50%;
+       box-shadow:0 0 1px #333;
+   }
